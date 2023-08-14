@@ -142,6 +142,6 @@ print(QA_trans("Tôi đi xe máy, lỗi đi sai làn đường sẽ bị phạt 
 
 
 demo.launch(
-    share=True,
+    server_name="0.0.0.0",
     server_port=5556
 )
