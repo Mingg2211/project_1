@@ -139,5 +139,5 @@ demo = gr.Interface(
 )
 
 demo.launch(
-    port=5556
+    server_port=5556
 )
