@@ -139,5 +139,6 @@ demo = gr.Interface(
 )
 
 demo.launch(
+    server_name='https://llm.hpda.vn/',
     server_port=5556
 )
