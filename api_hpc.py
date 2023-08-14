@@ -1,4 +1,7 @@
 import gradio as gr
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 from torch import cuda, bfloat16
 import transformers
 import torch
@@ -139,5 +142,5 @@ demo = gr.Interface(
 )
 
 demo.launch(
-    server_port=5556
+    port=5556
 )
