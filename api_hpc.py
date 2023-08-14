@@ -128,7 +128,9 @@ def QA_trans(query):
 examples = [
     ["Tôi đi xe ô tô, lỗi đi sai làn đường sẽ bị phạt bao nhiêu tiền"],
     ["Đi xe máy không đội mũ bảo hiểm phạt bao nhiêu"],
+    ["Tôi muốn thành lập doanh nghiệp thì cần làm những gì?"],
     ["Giải thích sơ qua cho tôi về điều 12 của Luật lao động"],
+    ["Có những thủ tục nào để đăng ký kinh doanh?"],
 ]
 
 demo = gr.Interface(
@@ -137,9 +139,6 @@ demo = gr.Interface(
     outputs=gr.outputs.Textbox(label="Câu trả lời"),
     examples=examples
 )
-
-print(QA_trans("Tôi đi xe máy, lỗi đi sai làn đường sẽ bị phạt bao nhiêu tiền"))
-
 
 demo.launch(
     server_name="0.0.0.0",
