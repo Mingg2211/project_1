@@ -48,7 +48,7 @@ print(f"Model loaded on {device}")
 
 tokenizer = transformers.AutoTokenizer.from_pretrained(
     model_id,
-    cache_dir='/tmp/bags/',
+    cache_dir='tmp',
     use_auth_token=hf_auth    
 )
 
