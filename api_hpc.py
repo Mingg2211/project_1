@@ -138,7 +138,10 @@ demo = gr.Interface(
     examples=examples
 )
 
+print(QA_trans("Tôi đi xe máy, lỗi đi sai làn đường sẽ bị phạt bao nhiêu tiền"))
+
+
 demo.launch(
-    server_name='https://llm.hpda.vn/',
+    share=True,
     server_port=5556
 )
