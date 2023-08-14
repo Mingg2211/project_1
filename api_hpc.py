@@ -128,7 +128,7 @@ def QA_trans(query):
 examples = [
     ["Tôi đi xe ô tô, lỗi đi sai làn đường sẽ bị phạt bao nhiêu tiền"],
     ["Đi xe máy không đội mũ bảo hiểm phạt bao nhiêu"],
-    ["Nói cho tôi về điều 12 của Luật lao động"],
+    ["Giải thích sơ qua cho tôi về điều 12 của Luật lao động"],
 ]
 
 demo = gr.Interface(
