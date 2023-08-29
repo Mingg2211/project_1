@@ -104,7 +104,7 @@ hf = HuggingFaceEmbeddings(
     encode_kwargs=encode_kwargs
 )
 
-vectorstore3 = Chroma.from_documents(documents=all_splits, embedding=hf)
+vectorstore = Chroma.from_documents(documents=all_splits, embedding=hf)
 template = """Use the following pieces of context to answer the question at the end.
 If you don't know the answer, just say that you don't know, don't try to make up an answer.
 Use three sentences maximum and keep the answer as concise as possible.
@@ -115,7 +115,7 @@ QA_CHAIN_PROMPT = PromptTemplate.from_template(template)
 from langchain.chains import RetrievalQA
 qa_chain = RetrievalQA.from_chain_type(
     llm,
-    retriever=vectorstore3.as_retriever(),
+    retriever=vectorstore.as_retriever(),
     chain_type_kwargs={"prompt": QA_CHAIN_PROMPT}
     )
 
